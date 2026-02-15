@@ -43,6 +43,18 @@ To deploy your CHANING FP website to Vercel, follow these steps:
    vercel --prod
    ```
 
-### Important Notes
-- **Environment Variables**: If you add a backend or contact form service later, remember to add the environment variables in the Vercel Project Settings.
-- **Custom Domain**: You can add your own domain (e.g., `chaning-fp.cm`) in the "Domains" tab of your Vercel project.
+### Mises à Jour (MAJ)
+
+L'un des plus grands avantages de Vercel est le **Déploiement Continu**. Voici comment mettre à jour votre site :
+
+1. **Modifiez votre code** localement dans votre éditeur.
+2. **Envoyez les changements vers GitHub** :
+   ```bash
+   git add .
+   git commit -m "Description de vos modifications"
+   git push origin main
+   ```
+3. **Automatique** : Dès que vous faites le `push`, Vercel détecte le changement, lance un nouveau "Build" et met à jour votre site en ligne en quelques secondes.
+
+> [!TIP]
+> Vous pouvez suivre l'avancement du déploiement en temps réel sur votre tableau de bord Vercel dans l'onglet **"Deployments"**.

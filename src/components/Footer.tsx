@@ -20,20 +20,13 @@ const Footer = () => {
                         <h4>L'école</h4>
                         <ul>
                             <li><Link href="/about">Notre vision</Link></li>
-                            <li><Link href="/about">L'équipe</Link></li>
-                            <li><Link href="/formations">Nos formations</Link></li>
-                            <li><Link href="/contact">Actualités</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.col}>
-                        <h4>Utiles</h4>
-                        <ul>
-                            <li><Link href="/admissions">Admissions</Link></li>
-                            <li><Link href="/admissions">Calendrier</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                            <li><Link href="#">FAQ</Link></li>
-                        </ul>
+                            <h4>Utiles</h4>
+                            <ul>
+                                <li><Link href="/admissions">Admissions</Link></li>
+                                <li><Link href="/admissions">Calendrier</Link></li>
+                                <li><Link href="/contact">Contact</Link></li>
+                                <li><Link href="#">FAQ</Link></li>
+                            </ul>
                     </div>
 
                     <div className={styles.col}>
@@ -41,19 +34,23 @@ const Footer = () => {
                         <ul className={styles.contactInfo}>
                             <li>
                                 <span>📍</span>
-                                <span>Adresse de l'école, Ville</span>
+                                <span>Melen, Face CHU, Yaoundé</span>
+                            </li>
+                            <li>
+                                <span>📍</span>
+                                <span>Ange Raphaël, Face Univ, Douala</span>
                             </li>
                             <li>
                                 <span>📞</span>
-                                <span>+XXX XX XX XX XX</span>
+                                <span>+237 699 92 29 54</span>
                             </li>
                             <li>
                                 <span>✉️</span>
-                                <span>contact@chaningfp.fr</span>
+                                <span>chaningfp@yahoo.fr</span>
                             </li>
                             <li>
                                 <span>💬</span>
-                                <span>WhatsApp: +XXX XX XX XX XX</span>
+                                <span>WhatsApp: +237 699 92 29 54</span>
                             </li>
                         </ul>
                     </div>
