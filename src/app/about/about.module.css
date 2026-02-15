@@ -1,0 +1,108 @@
+.container {
+    padding-top: 60px;
+}
+
+.hero {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.content {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+}
+
+.textBlock h2,
+.values h2 {
+    margin-bottom: 24px;
+    color: var(--primary);
+}
+
+.textBlock p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.values ul {
+    list-style: none;
+}
+
+.values li {
+    margin-bottom: 16px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.values li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.team {
+    background: var(--accent);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 16px;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: var(--container-max-width);
+    margin: 60px auto 0;
+}
+
+.member {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.avatarPlaceholder {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-transparent);
+    border-radius: 50%;
+    margin: 0 auto 24px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+}

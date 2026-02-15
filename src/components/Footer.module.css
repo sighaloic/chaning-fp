@@ -1,0 +1,137 @@
+.footer {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 80px 0 40px;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.info h3 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info h3 span {
+    color: var(--primary);
+}
+
+.info p {
+    color: #aaa;
+    max-width: 300px;
+    margin-bottom: 25px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.socialLink:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.col h4 {
+    color: var(--white);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.col ul li a {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.col ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.contactInfo li {
+    display: flex;
+    gap: 10px;
+    color: #aaa;
+}
+
+.bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .info h3,
+    .col h4::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
