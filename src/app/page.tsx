@@ -53,7 +53,7 @@ export default function Home() {
           <div className={styles.locationCard}>
             <div className={styles.cardImageContainer}>
               <Image
-                src="/images/pharmacy.png"
+                src="/images/hero_rebrand.png"
                 alt="Laboratoire Pharmacie"
                 width={600}
                 height={300}
@@ -67,8 +67,14 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.locationCard}>
-            <div className={styles.cardImagePlaceholder}>
-              <span>Douala - Ange Raphaël</span>
+            <div className={styles.cardImageContainer}>
+              <Image
+                src="/images/classroom_rebrand.png"
+                alt="Centre de Formation Douala"
+                width={600}
+                height={300}
+                className={styles.cardImage}
+              />
             </div>
             <div className={styles.cardContent}>
               <h3>Annexe (Douala)</h3>

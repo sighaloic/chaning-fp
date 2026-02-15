@@ -101,8 +101,10 @@
 }
 
 .category {
-    background: var(--primary-transparent);
-    color: var(--primary);
+    background: var(--secondary-transparent);
+    /* Pink transparent bg */
+    color: var(--secondary);
+    /* Magenta Pink text */
     padding: 4px 12px;
     border-radius: 4px;
     font-size: 0.8rem;

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('/images/hero.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('/images/hero_rebrand.png');
   background-size: cover;
   background-position: center;
   padding: 40px 20px;
@@ -218,7 +218,7 @@
 
 .card:hover {
   transform: translateY(-15px);
-  box-shadow: 0 40px 80px rgba(0, 135, 62, 0.1);
+  box-shadow: 0 40px 80px rgba(45, 79, 147, 0.1);
 }
 
 .iconContainer {

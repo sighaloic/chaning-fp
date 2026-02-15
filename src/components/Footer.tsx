@@ -10,7 +10,7 @@ const Footer = () => {
                         <h3>CHANING <span>FP</span></h3>
                         <p>Pionnier de la formation professionnelle médicale et pharmaceutique au Cameroun depuis 2004.</p>
                         <div className={styles.socials}>
-                            <a href="https://www.facebook.com/ChaningFP" className={styles.socialLink} target="_blank" rel="noopener noreferrer">F</a>
+                            <a href="https://www.facebook.com/profile.php?id=100057020157321" className={styles.socialLink} target="_blank" rel="noopener noreferrer">F</a>
                             <a href="#" className={styles.socialLink}>I</a>
                             <a href="#" className={styles.socialLink}>L</a>
                         </div>

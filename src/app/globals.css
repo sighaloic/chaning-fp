@@ -1,13 +1,17 @@
 :root {
-  /* Colors - Based on Original Specification */
-  --primary: #00873E;
-  /* Emerald Green */
-  --primary-light: #00A64C;
-  --primary-dark: #006830;
-  --primary-transparent: rgba(0, 135, 62, 0.1);
+  /* Colors - Based on Facebook Rebranding (Blue & Pink) */
+  --primary: #2D4F93;
+  /* Royal Blue */
+  --primary-light: #4A6FB4;
+  --primary-dark: #1F3868;
+  --primary-transparent: rgba(45, 79, 147, 0.1);
 
-  --secondary: #1A1A1A;
-  /* Dark Grey/Black */
+  --secondary: #E6007E;
+  /* Magenta Pink */
+  --secondary-light: #FF33A1;
+  --secondary-dark: #B30062;
+  --secondary-transparent: rgba(230, 0, 126, 0.1);
+
   --accent: #F4F4F4;
   /* Light Grey background */
 
@@ -77,10 +81,16 @@
   animation: slideUp var(--transition-slow) forwards;
 }
 
-/* Modern Geometric Pattern Utility */
+/* Modern Geometric Pattern Utility - Adjusted for Blue Theme */
 .bg-pattern {
   background-color: #ffffff;
-  background-image: linear-gradient(30deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(150deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(30deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(150deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(60deg, #dcfce7 25%, transparent 25.5%, transparent 75%, #dcfce7 75%, #dcfce7), linear-gradient(60deg, #dcfce7 25%, transparent 25.5%, transparent 75%, #dcfce7 75%, #dcfce7);
+  background-image:
+    linear-gradient(30deg, #f0f4fd 12%, transparent 12.5%, transparent 87%, #f0f4fd 87.5%, #f0f4fd),
+    linear-gradient(150deg, #f0f4fd 12%, transparent 12.5%, transparent 87%, #f0f4fd 87.5%, #f0f4fd),
+    linear-gradient(30deg, #f0f4fd 12%, transparent 12.5%, transparent 87%, #f0f4fd 87.5%, #f0f4fd),
+    linear-gradient(150deg, #f0f4fd 12%, transparent 12.5%, transparent 87%, #f0f4fd 87.5%, #f0f4fd),
+    linear-gradient(60deg, #e0e7ff 25%, transparent 25.5%, transparent 75%, #e0e7ff 75%, #e0e7ff),
+    linear-gradient(60deg, #e0e7ff 25%, transparent 25.5%, transparent 75%, #e0e7ff 75%, #e0e7ff);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
@@ -122,7 +132,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--secondary);
+  color: var(--primary);
+  /* Headlines now lean towards Blue */
   font-weight: 700;
   line-height: 1.2;
 }
@@ -155,7 +166,12 @@ h6 {
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 135, 62, 0.2);
+  box-shadow: 0 4px 12px rgba(45, 79, 147, 0.2);
+}
+
+.highlight {
+  color: var(--secondary);
+  /* Highlighting Pink for emphasis */
 }
 
 /* Responsive utilities */

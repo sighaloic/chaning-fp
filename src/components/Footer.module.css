@@ -1,5 +1,6 @@
 .footer {
-    background: var(--secondary);
+    background: var(--primary);
+    /* Royal Blue for Footer background */
     color: var(--white);
     padding: 80px 0 40px;
 }
@@ -24,11 +25,12 @@
 }
 
 .info h3 span {
-    color: var(--primary);
+    color: var(--secondary);
+    /* Pink for the FP span */
 }
 
 .info p {
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.7);
     max-width: 300px;
     margin-bottom: 25px;
 }
@@ -41,7 +43,7 @@
 .socialLink {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +52,8 @@
 }
 
 .socialLink:hover {
-    background: var(--primary);
+    background: var(--secondary);
+    /* Pink on hover */
     transform: translateY(-3px);
 }
 
@@ -68,7 +71,8 @@
     bottom: 0;
     width: 30px;
     height: 2px;
-    background: var(--primary);
+    background: var(--secondary);
+    /* Pink accent line */
 }
 
 .col ul {
@@ -78,28 +82,29 @@
 }
 
 .col ul li a {
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
 }
 
 .col ul li a:hover {
-    color: var(--primary);
+    color: var(--secondary);
+    /* Pink on hover */
     padding-left: 5px;
 }
 
 .contactInfo li {
     display: flex;
     gap: 10px;
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .bottom {
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #666;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
 }
 
