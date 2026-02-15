@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className={styles.grid}>
                     <div className={styles.info}>
                         <h3>CHANING <span>FP</span></h3>
-                        <p>Le centre de formation professionnelle de référence pour construire votre avenir avec excellence et modernité.</p>
+                        <p>Pionnier de la formation professionnelle médicale et pharmaceutique au Cameroun depuis 2004.</p>
                         <div className={styles.socials}>
-                            <a href="#" className={styles.socialLink}>F</a>
+                            <a href="https://www.facebook.com/ChaningFP" className={styles.socialLink} target="_blank" rel="noopener noreferrer">F</a>
                             <a href="#" className={styles.socialLink}>I</a>
                             <a href="#" className={styles.socialLink}>L</a>
                         </div>
@@ -20,13 +20,18 @@ const Footer = () => {
                         <h4>L'école</h4>
                         <ul>
                             <li><Link href="/about">Notre vision</Link></li>
-                            <h4>Utiles</h4>
-                            <ul>
-                                <li><Link href="/admissions">Admissions</Link></li>
-                                <li><Link href="/admissions">Calendrier</Link></li>
-                                <li><Link href="/contact">Contact</Link></li>
-                                <li><Link href="#">FAQ</Link></li>
-                            </ul>
+                            <li><Link href="/about">L'équipe</Link></li>
+                            <li><Link href="/formations">Nos formations</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.col}>
+                        <h4>Utiles</h4>
+                        <ul>
+                            <li><Link href="/admissions">Admissions</Link></li>
+                            <li><Link href="/admissions">Calendrier</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
+                        </ul>
                     </div>
 
                     <div className={styles.col}>
