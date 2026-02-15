@@ -18,6 +18,7 @@
   --background: #ffffff;
   --foreground: var(--text-main);
 
+  /* Glassmorphism */
   --glass: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(255, 255, 255, 0.3);
 
@@ -25,9 +26,63 @@
   --section-padding: 80px 20px;
   --container-max-width: 1200px;
 
-  /* Transitions */
+  /* Transitions & Animations */
   --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
   --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Global Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-slow) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-slow) forwards;
+}
+
+/* Modern Geometric Pattern Utility */
+.bg-pattern {
+  background-color: #ffffff;
+  background-image: linear-gradient(30deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(150deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(30deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(150deg, #f0fdf4 12%, transparent 12.5%, transparent 87%, #f0fdf4 87.5%, #f0fdf4), linear-gradient(60deg, #dcfce7 25%, transparent 25.5%, transparent 75%, #dcfce7 75%, #dcfce7), linear-gradient(60deg, #dcfce7 25%, transparent 25.5%, transparent 75%, #dcfce7 75%, #dcfce7);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 * {

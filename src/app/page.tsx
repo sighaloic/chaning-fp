@@ -6,14 +6,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* Hero Section */}
-      <section className={styles.hero}>
+      <section className={`${styles.hero} animate-fade-in`}>
+        <div className={styles.heroOverlay}></div>
         <div className={styles.heroContent}>
+          <div className={styles.badge}>Depuis 2004</div>
           <h1 className={styles.title}>
-            Pionnier de la <span className={styles.highlight}>Formation Médicale</span> depuis 2004
+            Pionnier de la <span className={styles.highlight}>Formation Médicale</span> au Cameroun
           </h1>
           <p className={styles.subtitle}>
             CHANING FP : L'excellence en Santé et Pharmacie.
-            Plus de 20 ans d'expertise pour lancer votre carrière de Délégué Médical ou Auxiliaire de Pharmacie.
+            Débloquez votre avenir avec nos programmes certifiés par le MINEFOP.
           </p>
           <div className={styles.ctaGroup}>
             <Link href="/formations" className="btn-primary">
@@ -26,56 +28,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className={styles.stats}>
-        <div className={styles.statItem}>
-          <span className={styles.statNumber}>20+</span>
-          <span className={styles.statLabel}>Ans d'Excellence</span>
-        </div>
-        <div className={styles.statItem}>
-          <span className={styles.statNumber}>277+</span>
-          <span className={styles.statLabel}>Entreprises Partenaires</span>
-        </div>
-        <div className={styles.statItem}>
-          <span className={styles.statNumber}>1000+</span>
-          <span className={styles.statLabel}>Professionnels Formés</span>
-        </div>
-        <div className={styles.statItem}>
-          <span className={styles.statNumber}>DQP</span>
-          <span className={styles.statLabel}>Diplôme MINEFOP</span>
-        </div>
+      {/* Stats Section with Slide Up Effect */}
+      <section className={`${styles.stats} animate-slide-up`}>
+        {[
+          { number: "20+", label: "Ans d'Excellence" },
+          { number: "277+", label: "Laboratoires Partenaires" },
+          { number: "1000+", label: "Diplômés Actifs" },
+          { number: "DQP", label: "Certification État" }
+        ].map((stat, idx) => (
+          <div key={idx} className={styles.statItem}>
+            <span className={styles.statNumber}>{stat.number}</span>
+            <span className={styles.statLabel}>{stat.label}</span>
+          </div>
+        ))}
       </section>
 
       {/* Localisation Highlights */}
-      <section className={styles.locations}>
-        <h2 className={styles.sectionTitle}>Nos Centres de Formation</h2>
+      <section className={`${styles.locations} container`}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Nos Centres de Formation</h2>
+          <p className={styles.sectionSubtitle}>Des environnements d'apprentissage modernes au cœur des pôles médicaux.</p>
+        </div>
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Siège (Yaoundé)</h3>
-            <p><strong>Melen :</strong> Face au CHU (Centre Hospitalier et Universitaire). Un cadre historique au cœur de la capitale.</p>
+          <div className={styles.locationCard}>
+            <div className={styles.cardImagePlaceholder}>
+              <span>Yaoundé - Melen</span>
+            </div>
+            <div className={styles.cardContent}>
+              <h3>Siège (Yaoundé)</h3>
+              <p><strong>Melen :</strong> Face au CHU. Un cadre historique au cœur de la capitale, idéal pour l'immersion médicale.</p>
+              <Link href="/contact" className={styles.cardLink}>Voir sur la carte →</Link>
+            </div>
           </div>
-          <div className={styles.card}>
-            <h3>Annexe (Douala)</h3>
-            <p><strong>Ange Raphaël :</strong> Face à l'Université de Douala. Idéalement situé pour nos étudiants du Littoral.</p>
+          <div className={styles.locationCard}>
+            <div className={styles.cardImagePlaceholder}>
+              <span>Douala - Ange Raphaël</span>
+            </div>
+            <div className={styles.cardContent}>
+              <h3>Annexe (Douala)</h3>
+              <p><strong>Ange Raphaël :</strong> Face à l'UdeD. Idéalement situé pour nos étudiants du Littoral et des régions environnantes.</p>
+              <Link href="/contact" className={styles.cardLink}>Voir sur la carte →</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Formations */}
-      <section className={styles.featured}>
-        <h2 className={styles.sectionTitle}>Nos Spécialités</h2>
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Délégué Médical</h3>
-            <p>Le pont entre les laboratoires pharmaceutiques et les professionnels de santé.</p>
+      {/* Featured Formations with Pattern Background */}
+      <section className={`${styles.featured} bg-pattern`}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Nos Spécialités</h2>
+            <p className={styles.sectionSubtitle}>Des formations de 12 mois conçues pour l'insertion directe.</p>
           </div>
-          <div className={styles.card}>
-            <h3>Auxiliaire de Pharmacie</h3>
-            <p>Maîtrisez la gestion officinale et le conseil client en pharmacie.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Secrétaire Médical</h3>
-            <p>L'expertise administrative au service du parcours de soin.</p>
+          <div className={styles.grid}>
+            {[
+              { title: "Délégué Médical", desc: "Le lien stratégique entre laboratoires et praticiens." },
+              { title: "Auxiliaire de Pharmacie", desc: "Expertise en gestion officinale et conseil patient." },
+              { title: "Secrétaire Médical", desc: "Gestion administrative avancée des établissements de santé." }
+            ].map((item, idx) => (
+              <div key={idx} className={styles.card}>
+                <div className={styles.iconContainer}>
+                  <div className={styles.dot}></div>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+                <Link href="/formations" className={styles.cardLink}>Savoir plus</Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>

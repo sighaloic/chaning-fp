@@ -1,25 +1,28 @@
 .container {
-    padding-top: 60px;
+    padding-bottom: 80px;
 }
 
 .hero {
-    background: var(--secondary);
-    color: var(--white);
-    padding: 100px 0;
+    padding: 120px 0 80px;
+    background: var(--white);
     text-align: center;
 }
 
-.hero h1 {
-    color: var(--white);
-    font-size: 3rem;
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--primary-transparent);
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
 }
 
 .process {
@@ -30,7 +33,7 @@
 .sectionTitle {
     text-align: center;
     margin-bottom: 60px;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .stepsGrid {
@@ -41,75 +44,89 @@
 
 .stepCard {
     background: var(--accent);
-    padding: 40px 30px;
-    border-radius: 20px;
-    position: relative;
-    transition: var(--transition-fast);
+    padding: 40px;
+    border-radius: 24px;
+    transition: var(--transition-slow);
 }
 
 .stepCard:hover {
     background: var(--white);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+}
+
+.stepHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.stepIcon {
+    font-size: 2rem;
 }
 
 .stepNumber {
-    display: block;
-    font-size: 3rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    color: var(--primary-transparent);
-    margin-bottom: 10px;
-    line-height: 1;
+    color: var(--primary);
+    opacity: 0.3;
 }
 
 .stepCard h3 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-    color: var(--secondary);
-}
-
-.stepCard p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    font-size: 1.4rem;
+    margin-bottom: 16px;
 }
 
 .info {
-    background: var(--accent);
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .infoGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
-.infoBlock h2 {
-    color: var(--primary);
+.marker {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
+.infoBlock h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
 .infoBlock p {
+    font-size: 1.1rem;
     line-height: 1.8;
+    white-space: pre-line;
 }
 
-.finalCta {
+.ctaCard {
+    background: var(--white);
+    padding: 60px;
+    border-radius: 32px;
     text-align: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-    .stepsGrid {
-        grid-template-columns: 1fr 1fr;
-    }
+.ctaCard h3 {
+    font-size: 2rem;
+    margin-bottom: 16px;
 }
 
-@media (max-width: 768px) {
-    .stepsGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .infoGrid {
-        grid-template-columns: 1fr;
-    }
+.ctaCard p {
+    margin-bottom: 32px;
+    color: var(--text-muted);
 }

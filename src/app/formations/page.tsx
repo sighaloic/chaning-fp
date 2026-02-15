@@ -8,7 +8,13 @@ const formations = [
         category: "Santé",
         duration: "12 mois",
         level: "DQP (MINEFOP)",
-        description: "Devenez l'expert qui assure la promotion des médicaments et des dispositifs médicaux auprès des praticiens."
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 14.5A2.5 2.5 0 0 1 16.5 17h-9A2.5 2.5 0 0 1 5 14.5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v9.5z" />
+                <path d="M12 7v6M9 10h6" />
+            </svg>
+        ),
+        description: "Le pont stratégique entre laboratoires et médecins."
     },
     {
         id: "auxiliaire-pharmacie",
@@ -16,7 +22,12 @@ const formations = [
         category: "Pharmacie",
         duration: "12 mois",
         level: "DQP (MINEFOP)",
-        description: "Apprenez à seconder le pharmacien dans la préparation, la délivrance et la gestion des stocks de l'officine."
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4.5 9h15M4.5 15h15M6 3v18M18 3v18" />
+            </svg>
+        ),
+        description: "Expertise en gestion officinale et oncil patient."
     },
     {
         id: "secretaire-medical",
@@ -24,7 +35,13 @@ const formations = [
         category: "Santé",
         duration: "12 mois",
         level: "DQP (MINEFOP)",
-        description: "Maîtrisez l'accueil, la gestion des dossiers patients et l'organisation des cabinets médicaux et cliniques."
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M7 8h10M7 12h10M7 16h6" />
+            </svg>
+        ),
+        description: "Gestion administrative des structures de santé."
     },
     {
         id: "statistiques-appliquees",
@@ -32,60 +49,60 @@ const formations = [
         category: "Analyse",
         duration: "12 mois",
         level: "DQP (MINEFOP)",
-        description: "Spécialisez-vous dans le traitement des données de santé et les études épidémiologiques."
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M3 3v18h18" />
+                <path d="M18 9l-5 5-2-2-4 4" />
+            </svg>
+        ),
+        description: "Analyse avancée des données de santé."
     }
 ];
 
 export default function FormationsPage() {
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} animate-fade-in`}>
             <header className={styles.header}>
                 <div className="container">
-                    <h1>Nos <span className="highlight">Formations</span></h1>
-                    <p>Trouvez le parcours qui correspond à vos ambitions.</p>
+                    <div className={styles.badge}>Catalogue 2024</div>
+                    <h1>Nos <span className="highlight">Filières</span> d'Excellence</h1>
+                    <p>Des programmes intensifs de 12 mois pour une insertion professionnelle immédiate.</p>
                 </div>
             </header>
 
-            <section className={styles.content}>
+            <section className={styles.catalog}>
                 <div className="container">
-                    <div className={styles.filterSection}>
-                        {/* Simple filtering tabs placeholder */}
-                        <div className={styles.tabs}>
-                            <button className={styles.tabActive}>Tous</button>
-                            <button className={styles.tab}>Commerce</button>
-                            <button className={styles.tab}>Gestion</button>
-                            <button className={styles.tab}>Digital</button>
-                        </div>
-                    </div>
-
                     <div className={styles.grid}>
-                        {formations.map((f) => (
-                            <div key={f.id} className={styles.card}>
-                                <div className={styles.cardHeader}>
-                                    <span className={styles.category}>{f.category}</span>
-                                    <span className={styles.level}>{f.level}</span>
+                        {formations.map((item) => (
+                            <div key={item.id} className={styles.card}>
+                                <div className={styles.iconWrapper}>
+                                    {item.icon}
                                 </div>
-                                <h3>{f.title}</h3>
-                                <p>{f.description}</p>
-                                <div className={styles.cardFooter}>
-                                    <span className={styles.duration}>Durée : {f.duration}</span>
-                                    <Link href={`/formations/${f.id}`} className={styles.detailsBtn}>
-                                        Voir détails →
-                                    </Link>
+                                <div className={styles.tag}>{item.category}</div>
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                                <div className={styles.meta}>
+                                    <span>⏱ {item.duration}</span>
+                                    <span>🎓 {item.level}</span>
                                 </div>
+                                <Link href="/contact" className={styles.detailsBtn}>
+                                    S'inscrire
+                                </Link>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className={styles.cta}>
+            <section className={`${styles.cta} bg-pattern`}>
                 <div className="container">
-                    <h2>Besoin d'aide pour choisir ?</h2>
-                    <p>Nos conseillers d'orientation sont là pour vous accompagner dans votre projet.</p>
-                    <Link href="/contact" className="btn-primary">
-                        Prendre rendez-vous
-                    </Link>
+                    <div className={styles.ctaBox}>
+                        <h2>Besoin d'orientation ?</h2>
+                        <p>Nos conseillers sont disponibles pour vous guider vers la filière adaptée à votre profil.</p>
+                        <Link href="/contact" className="btn-primary">
+                            Prendre rendez-vous
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>

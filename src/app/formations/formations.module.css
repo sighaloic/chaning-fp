@@ -70,18 +70,28 @@
 
 .card {
     background: var(--white);
-    border-radius: 16px;
-    border: 1px solid #eee;
-    padding: 30px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    transition: var(--transition-slow);
     display: flex;
     flex-direction: column;
-    transition: var(--transition-slow);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
     border-color: var(--primary-transparent);
+}
+
+.meta {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid #f5f5f5;
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
 .cardHeader {

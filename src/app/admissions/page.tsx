@@ -6,41 +6,49 @@ export default function AdmissionsPage() {
         {
             number: "01",
             title: "Candidature en ligne",
-            description: "Remplissez notre formulaire de candidature et déposez votre CV ainsi que vos derniers bulletins de notes."
+            icon: "📑",
+            description: "Dépôts des dossiers (Yaoundé ou Douala) ou via notre portail numérique."
         },
         {
             number: "02",
             title: "Entretien Individuel",
-            description: "Rencontrez nos chargés d'admission pour discuter de votre projet professionnel et de votre motivation."
+            icon: "🤝",
+            description: "Discussion sur votre projet professionnel et motivation avec nos experts."
         },
         {
             number: "03",
-            title: "Tests de Sélection",
-            description: "Selon la formation choisie, des tests de positionnement (culture G, logique, anglais) peuvent être requis."
+            title: "Tests de Niveau",
+            icon: "✍️",
+            description: "Évaluation des aptitudes de base selon la filière choisie (Santé ou Analyse)."
         },
         {
             number: "04",
-            title: "Inscription Finale",
-            description: "Une fois admis, finalisez votre dossier avec les pièces administratives et trouvez votre entreprise d'accueil."
+            title: "Inscription & Stage",
+            icon: "🎓",
+            description: "Finalisation du dossier et planification de l'immersion en milieu professionnel."
         }
     ];
 
     return (
-        <div className={styles.container}>
-            <section className={styles.hero}>
+        <div className={`${styles.container} animate-fade-in`}>
+            <header className={styles.hero}>
                 <div className="container">
+                    <div className={styles.badge}>Inscriptions Ouvertes</div>
                     <h1>Rejoindre <span className="highlight">CHANING FP</span></h1>
-                    <p>Un processus d'admission simple et transparent pour lancer votre avenir.</p>
+                    <p>Un parcours structuré pour transformer votre vocation en expertise médicale.</p>
                 </div>
-            </section>
+            </header>
 
             <section className={styles.process}>
                 <div className="container">
-                    <h2 className={styles.sectionTitle}>Les Étapes de votre Inscription</h2>
+                    <h2 className={styles.sectionTitle}>Processus d'Admission</h2>
                     <div className={styles.stepsGrid}>
                         {steps.map((step) => (
                             <div key={step.number} className={styles.stepCard}>
-                                <span className={styles.stepNumber}>{step.number}</span>
+                                <div className={styles.stepHeader}>
+                                    <span className={styles.stepIcon}>{step.icon}</span>
+                                    <span className={styles.stepNumber}>{step.number}</span>
+                                </div>
                                 <h3>{step.title}</h3>
                                 <p>{step.description}</p>
                             </div>
@@ -49,22 +57,35 @@ export default function AdmissionsPage() {
                 </div>
             </section>
 
-            <section className={styles.info}>
+            <section className={`${styles.info} bg-pattern`}>
                 <div className="container">
                     <div className={styles.infoGrid}>
                         <div className={styles.infoBlock}>
-                            <h2>Structure de la Formation</h2>
-                            <p>Nos programmes DQP s'étendent sur 12 mois : <strong>7 mois de cours théoriques</strong> intensifs en présentiel suivis de <strong>16 semaines de stage pratique</strong> en entreprise (laboratoires, pharmacies, cliniques).</p>
+                            <div className={styles.marker}>DQP</div>
+                            <h2>Structure du Programme</h2>
+                            <p>
+                                Nos formations durent **12 mois** :
+                                - **7 mois** de cours intensifs (Théorie & Travaux Dirigés).
+                                - **16 semaines** de stage pratique garanti en laboratoire ou pharmacie.
+                            </p>
                         </div>
                         <div className={styles.infoBlock}>
+                            <div className={styles.marker}>MINEFOP</div>
                             <h2>Diplôme & Certification</h2>
-                            <p>À l'issue de votre parcours, vous obtenez le <strong>DQP (Diplôme de Qualification Professionnelle)</strong> délivré par le MINEFOP (Ministère de l'Emploi et de la Formation Professionnelle), reconnu par l'État et les employeurs.</p>
+                            <p>
+                                Le **Diplôme de Qualification Professionnelle (DQP)** est délivré par le **MINEFOP**.
+                                Il est reconnu par l'État et constitue le sésame pour l'emploi direct au Cameroun.
+                            </p>
                         </div>
                     </div>
                     <div className={styles.finalCta}>
-                        <Link href="/contact" className="btn-primary">
-                            Postuler maintenant
-                        </Link>
+                        <div className={styles.ctaCard}>
+                            <h3>Prêt à commencer ?</h3>
+                            <p>Inscrivez-vous pour la prochaine session et assurez votre place.</p>
+                            <Link href="/contact" className="btn-primary">
+                                Déposer ma candidature
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
