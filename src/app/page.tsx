@@ -51,8 +51,14 @@ export default function Home() {
         </div>
         <div className={styles.grid}>
           <div className={styles.locationCard}>
-            <div className={styles.cardImagePlaceholder}>
-              <span>Yaoundé - Melen</span>
+            <div className={styles.cardImageContainer}>
+              <Image
+                src="/images/pharmacy.png"
+                alt="Laboratoire Pharmacie"
+                width={600}
+                height={300}
+                className={styles.cardImage}
+              />
             </div>
             <div className={styles.cardContent}>
               <h3>Siège (Yaoundé)</h3>
